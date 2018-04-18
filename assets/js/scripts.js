@@ -292,32 +292,53 @@ jQuery(function ($) {
     // Contact Form
     // -------------------------------------------------------------
 
-    $('#contactForm').on('submit',function(e){
+    // $('#contactForm').on('submit',function(e){
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        var $action = $(this).prop('action');
-        var $data = $(this).serialize();
-        var $this = $(this);
+    //     var $action = $(this).prop('action');
+    //     var $data = $(this).serialize();
+    //     var $this = $(this);
 
-        $this.prevAll('.alert').remove();
+    //     $this.prevAll('.alert').remove();
 
-        $.get( $action, $data, function( data ) {
+    //     $.get( $action, $data, function( data ) {
 
-            if( data.response=='error' ){
+    //         if( data.response=='error' ){
 
-                $this.before( '<div class="alert alert-danger">'+data.message+'</div>' );
-            }
+    //             $this.before( '<div class="alert alert-danger">'+data.message+'</div>' );
+    //         }
 
-            if( data.response=='success' ){
+    //         if( data.response=='success' ){
 
-                $this.before( '<div class="alert alert-success">'+data.message+'</div>' );
-                $this.find('input, textarea').val('');
-            }
+    //             $this.before( '<div class="alert alert-success">'+data.message+'</div>' );
+    //             $this.find('input, textarea').val('');
+    //         }
 
-        }, "json");
+    //     }, "json");
 
-    });
+    // });
+
+    // This script requires jQuery and jquery-form plugin
+// You can use these ones from Cloudflare CDN:
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+//
+$('#bootstrapForm').submit(function (event) {
+    event.preventDefault()
+    var extraData = {}
+    $('#bootstrapForm').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            // Submit of form should be successful but JSONP callback will fail because Google Forms
+            // does not support it, so this is handled as a failure.
+            alert('Form Submitted. Thanks.')
+            // You can also redirect the user to a custom thank-you page:
+            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
+    })
+});
 
 
 
@@ -362,7 +383,7 @@ jQuery(function ($) {
 
             var mapOptions = {
                 zoom: 13,
-                scrollwheel: false,
+                scrollwheel: true,
                 center: myLatlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 disableDefaultUI: true,

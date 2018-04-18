@@ -30,7 +30,7 @@
 
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     line-height: 28px;
     font-weight: 300;
     font-size: 14px;
@@ -1457,10 +1457,10 @@ Icon for all respective meta
 }
 .hire-section-bg {
     padding: 110px 0;
-    background: -webkit-linear-gradient(bottom, #68C3A3, rgba(104, 195, 163, 0.7)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(top, #68C3A3, rgba(104, 195, 163, 0.7)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(top, #68C3A3, rgba(104, 195, 163, 0.7)); /*Fx 3.6-15*/
-    background: linear-gradient(to top, #407bb7, rgba(104, 195, 163, 0.7)); /*Standard*/
+    background: -webkit-linear-gradient(bottom, #171010, rgba(0, 0, 0, 0.7)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top, #171010, rgba(0, 0, 0, 0.7)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top, #171010, rgba(0, 0, 0, 0.7)); /*Fx 3.6-15*/
+    background: linear-gradient(to top, #171010, rgba(0, 0, 0, 0.7)); /*Standard*/
 }
 
 .hire-section h2 {
