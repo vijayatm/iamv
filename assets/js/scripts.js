@@ -1,7 +1,6 @@
 /*
-Theme Name: IAMX
-Author: Trendy Theme
-Author URL: trendytheme.net
+Theme Name: IAMV
+Author: Vijayatm
 */
 
 /*

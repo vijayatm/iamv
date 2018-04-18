@@ -1,8 +1,6 @@
 /*
-    Author: TrendyTheme
-    Template: I AM X
-    Version: 1.2
-    URL: http://demo.trendytheme.net/iamx/html
+    Author: vijayatm
+    Template: I AM V
 */
 
 
@@ -63,6 +61,16 @@ a:hover {
     text-decoration: none;
 }
 
+.quotation-mark{
+    
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    float: left;
+    
+}
 
 /* Transition elsements
 -------------------------------------------------------- */
@@ -97,6 +105,32 @@ a,
 }
 
 
+
+/* === Quote Section === */
+/* ------------------------------------------------------ */
+.quote-section {
+    background: url(../../assets/images/counter-bg.jpg) no-repeat top center #68C3A3;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;  
+}
+.quote-section-bg {
+    padding: 110px 0;
+    background: -webkit-linear-gradient(bottom, #171010, rgba(0, 0, 0, 0.7)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top, #171010, rgba(0, 0, 0, 0.7)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top, #171010, rgba(0, 0, 0, 0.7)); /*Fx 3.6-15*/
+    background: linear-gradient(to top, #000000, rgba(85, 90, 107, 0.7)); /*Standard*/
+}
+
+.quote-section h2 {
+
+    font-size: 36px;
+    /*margin-bottom: 40px;*/
+}
+
+.quote-section .btn {
+    padding: 9px 54px;
+}
 
 
 /* === Typography === */
@@ -559,6 +593,37 @@ SOCIAL ICON
 
 
 /* === About Section === */
+#awards .list-check li{
+    margin-bottom: 45px;
+}
+
+#awards .short-info{
+    margin-bottom: 0px;
+}
+
+/*#awards .short-info li{
+    background: url(../../assets/images/ico/medal.png) bottom center no-repeat;
+    width: 50%;
+    float: left;
+}*/
+
+/*#awards ul.list-check li{
+    content: url(../../assets/images/ico/medal.png);
+    position: relative;
+    width: 10px; 
+    line-height: 32px;
+}*/
+
+/*#awards .list-check li::before {
+    
+    background-size: 10px 20px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 10px; 
+    height: 10px;
+    
+}*/
+
 .short-info {
     margin-bottom: 40px;
 }
@@ -583,6 +648,8 @@ SOCIAL ICON
 .my-signature img{
     width: inherit;
 }
+
+
 
 
 /*download-button*/
@@ -1484,6 +1551,10 @@ Icon for all respective meta
     text-transform: uppercase;
 }
 .contact-form strong {
+    margin-bottom: 40px;
+}
+
+.contact-form h2 {
     margin-bottom: 40px;
 }
 
